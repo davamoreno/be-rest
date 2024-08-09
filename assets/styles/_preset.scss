@@ -1,0 +1,67 @@
+body {
+    font-family:  sans-serif;
+    // opacity: 0;
+    // visibility: hidden;
+
+    // &::-webkit-scrollbar {
+    //     width: 10px;
+    //     background-color: transparent;
+    // }
+
+    // &::-webkit-scrollbar-track {
+    //     background-color: #dadada;
+    // }
+
+    // &::-webkit-scrollbar-thumb {
+    //     background-color: #adadad;
+    // }
+
+    &.no-scroll {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+// #smooth-content { // https://greensock.com/forums/topic/35702-cant-reach-bottom-of-page-footer-after-adding-scrollsmoother/
+//     padding-top: 1px;
+// }
+
+[tmdr-anim="fade-up"] {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(90px);
+}
+
+.page-transition {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color(white);
+}
+
+.section {
+    padding: 160px 0;
+    
+    &--no-padding {
+        @extend .section;
+        padding: 0;
+    }
+
+    @media (max-width: 1399px) {
+        padding: 100px 0;
+    }
+
+    @media (max-width: 991px) {
+    }
+
+    @media (max-width: 767px) {
+        padding: 60px 0;
+    }
+}
+
+.grecaptcha-badge { 
+    visibility: hidden; 
+}
